@@ -4,14 +4,14 @@
 
 Your job is to build a simple UX to visualize and manipulate ERC721 Tokens.
 
-This repo contains the references (code + ABI) for two ERC721 tokens deployed on the Sepolia testnet, which you'll need to use.
+This repo contains the references (code + ABI) for two ERC721 tokens deployed on the Holesky testnet, which you'll need to use.
 
-- [Fake BAYC](contracts/FakeBAYC.sol) ( 0x1dA89342716B14602664626CD3482b47D5C2005E on Sepolia ) (get the [ABI](build/contracts/FakeBAYC.json))
-- [Fake Nefturians](contracts/FakeNefturians.sol) (0x9bAADf70BD9369F54901CF3Ee1b3c63b60F4F0ED on Sepolia ) (get the [ABI](build/contracts/FakeNefturians.json))
-- [Fake Meebits](contracts/FakeMeebits.sol) (0xD1d148Be044AEB4948B48A03BeA2874871a26003 on Sepolia ) (get the [ABI](build/contracts/FakeMeebits.json))
-- [Fake Meebits Claimer](contracts/FakeMeebitsClaimer.sol) (0x5341e225Ab4D29B838a813E380c28b0eFD6FBa55 on Sepolia ) (get the [ABI](build/contracts/FakeMeebitsClaimer.json))
+- [Fake BAYC](contracts/FakeBAYC.sol) (0xdecFAB04fb08cC5da6365C18B26A6B9b1D4BEDFE on Holesky ) (get the [ABI](artifacts/contracts/FakeBAYC.sol/FakeBAYC.json))
+- [Fake Nefturians](contracts/FakeNefturians.sol) (0x92Da472BE336A517778B86D7982e5fde0C7993c1 on Holesky ) (get the [ABI](artifacts/contracts/FakeNefturians.sol/FakeNefturians.json))
+- [Fake Meebits](contracts/FakeMeebits.sol) (0x238cb11301e9fEA82A7aD6C37137690185138eAE on Holesky ) (get the [ABI](artifacts/contracts/FakeMeebits.sol/FakeMeebits.json))
+- [Fake Meebits Claimer](contracts/FakeMeebitsClaimer.sol) (0x9B6F990793347005bb8a252A67F0FA4d56521447 on Holesky ) (get the [ABI](artifacts/contracts/FakeMeebitsClaimer.sol/FakeMeebitsClaimer.json))
 
-To get started using these tokens, I suggest you use the truffle generated ABI and MyCrypto or to visit Etherscan in order to claim/buy a token for each.
+To get started using these tokens, I suggest you use the hardhat generated ABI and MyCrypto or to visit Etherscan in order to claim/buy a token for each.
 
 ## Tasks list
 
@@ -19,8 +19,8 @@ To get started using these tokens, I suggest you use the truffle generated ABI a
 
 - Create a repo to host your work
 - Create a React / Vue JS app and create a page /chain-info(2 pts)
-- Connect your app to the Sepolia network through Metamask and display the ChainId, the last block number, and user address on /chain-info (2 pts)
-- Show an error page and redirect user to it if the chain is not Sepolia (1 pt)
+- Connect your app to the Holesky network through Metamask and display the ChainId, the last block number, and user address on /chain-info (2 pts)
+- Show an error page and redirect user to it if the chain is not Holesky (1 pt)
 
 ### Calling read and write functions
 

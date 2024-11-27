@@ -9,7 +9,7 @@ const privateKey = "";
 
 let provider = new HDWalletProvider({
   privateKeys: [privateKey],
-  providerOrUrl: `https://sepolia.infura.io/v3/${infuraApiKey}`,
+  providerOrUrl: `https://holesky.infura.io/v3/${infuraApiKey}`,
 });
 
 var web3 = new Web3(provider);
