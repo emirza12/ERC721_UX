@@ -71,4 +71,3 @@ Once you’ve installed the dependencies and set up the environment variables, y
 
 ```bash
 npm run dev
-```
