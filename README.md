@@ -1,51 +1,74 @@
-# erc721-ux
+# Ethereum DApp: Fake NFT Marketplace
 
-## Intro
+## Overview
 
-Your job is to build a simple UX to visualize and manipulate ERC721 Tokens.
+This project is a TypeScript-based decentralized application (DApp) built using **React** and **Vite**. It connects to the **Holesky** network through **MetaMask** and allows users to interact with multiple smart contracts for NFT-related operations. The app supports multiple pages to manage, claim, and display NFTs, as well as minting and purchasing functionalities.
 
-This repo contains the references (code + ABI) for two ERC721 tokens deployed on the Holesky testnet, which you'll need to use.
+## Features Implemented
 
-- [Fake BAYC](contracts/FakeBAYC.sol) (0xdecFAB04fb08cC5da6365C18B26A6B9b1D4BEDFE on Holesky ) (get the [ABI](artifacts/contracts/FakeBAYC.sol/FakeBAYC.json))
-- [Fake Nefturians](contracts/FakeNefturians.sol) (0x92Da472BE336A517778B86D7982e5fde0C7993c1 on Holesky ) (get the [ABI](artifacts/contracts/FakeNefturians.sol/FakeNefturians.json))
-- [Fake Meebits](contracts/FakeMeebits.sol) (0x238cb11301e9fEA82A7aD6C37137690185138eAE on Holesky ) (get the [ABI](artifacts/contracts/FakeMeebits.sol/FakeMeebits.json))
-- [Fake Meebits Claimer](contracts/FakeMeebitsClaimer.sol) (0x9B6F990793347005bb8a252A67F0FA4d56521447 on Holesky ) (get the [ABI](artifacts/contracts/FakeMeebitsClaimer.sol/FakeMeebitsClaimer.json))
+1. **/chain-info**  
+   Displays the current Ethereum **ChainId**, the **last block number**, and the **user address** connected via MetaMask. If the user is not connected to the Holesky network, an error page is displayed, and the user is redirected.
+   
+2. **/fakeBayc**  
+   Displays the name and total token number of the **Fake Bored Ape Yacht Club** collection. The user can claim a new token by clicking a button that triggers a write function on the smart contract.
 
-To get started using these tokens, I suggest you use the hardhat generated ABI and MyCrypto or to visit Etherscan in order to claim/buy a token for each.
+3. **/fakeBayc/{tokenId}**  
+   Displays the information (image and attributes) of a specific token by calling its **metadata URI** based on the provided `tokenId`. If the token does not exist, an error message is displayed.
 
-## Tasks list
+4. **/fakeNefturians**  
+   Displays the **minimum token price** and allows the user to **purchase** an NFT token. The purchase requires a transaction and payment via MetaMask.
 
-### Creating a js app and connecting to Ethereum
+5. **/fakeNefturians/{userAddress}**  
+   Displays all the tokens owned by the given `userAddress`, showing the token IDs, names, and descriptions (from metadata).
 
-- Create a repo to host your work
-- Create a React / Vue JS app and create a page /chain-info(2 pts)
-- Connect your app to the Holesky network through Metamask and display the ChainId, the last block number, and user address on /chain-info (2 pts)
-- Show an error page and redirect user to it if the chain is not Holesky (1 pt)
+6. **/fakeMeebits**  
+   Allows the user to **mint a new token**. The user can select a token that has not yet been minted and claim it using a signed message, invoking the `claimAToken()` function from the contract.
 
-### Calling read and write functions
+## Technologies Used
 
-- Create a page /fakeBayc
-- Display the name and the total token number (2 pts)
-- Create a button to claim a new token for the current user(2 pts)
-- Create a page /fakeBayc/{tokenId}
-- Display the informations (image and all the attributes) referenced in the Metadata URI for token {tokenId} (2 pts)
-- Show a clean error message on /fakeBayc/{tokenId} if the token does not exist (1pt)
+- **React** - Frontend library
+- **Vite** - Build tool for fast development
+- **Ethers.js** - Ethereum library for interacting with smart contracts
+- **MetaMask** - Browser extension wallet for Ethereum
+- **Solidity** - Smart contracts deployed on the **Holesky network**
+- **IPFS** - For storing metadata for NFTs (e.g., image, name, description)
 
-### Paying through functions
+## Prerequisites
 
-- Create a page /fakeNefturians
-- Display the minimum token price, and create a button to buy a token (this one needs to be paid for) (2 pts)
-- Create a page /fakeNefturians/{userAddress}
-- Display all the tokens {userAddress} id's has with nft name and description from metadata and token
+1. **MetaMask**: Install the MetaMask browser extension if you haven't already.
+   - Download it here: [MetaMask](https://metamask.io/)
+   
+2. **Holesky Network**: Connect your MetaMask to the **Holesky** network.
+   - In MetaMask, navigate to `Networks` > `Holesky` (or add it if it's not listed).
 
-### Calling a minter with a signature
+## Setup
 
-- Create a page /fakeMeebits
-- Create a button to mint a token.
-- Read the contract
-- Let the user pick a token number that wasn't minted yet
-- use [signature data](claimerV1-tools) to call function `claimAToken()` on [fake meebits claimer](contracts/FakeMeebits.sol) correctly (4 pts)
+### 1. Clone the Repository
 
-### Bonus
+```bash
+git clone https://github.com/your-username/fake-nft-marketplace.git
+cd fake-nft-marketplace
+```
 
-- Deploy your static web site (2 pts)
+### 2. Install Dependencies
+
+Install the necessary dependencies for React and Ethers.js:
+
+```bash
+npm install
+```
+### 3. Configure Environment Variables
+
+Create a `.env` file in the root of your project and add the following environment variables:
+
+```bash
+VITE_HOLESKY_API=<your_etherscan_api_key>
+VITE_PRIVATE_KEY=<your_holesky_private_key>
+```
+### 4. Start the Development Server
+
+Once you’ve installed the dependencies and set up the environment variables, you can run the development server:
+
+```bash
+npm run dev
+```
