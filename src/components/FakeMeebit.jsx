@@ -153,7 +153,7 @@ const FakeMeebits = () => {
 
   return (
     <div style={{ textAlign: "center", padding: "50px" }}>
-      <h1>Fake Meebits - Claim Your Token</h1>
+      <h1 style={{ marginBottom: '20px' }}>Fake Meebits - Claim Your Token</h1>
       <input
         type="number"
         placeholder="Enter Token ID (0-19999)"
@@ -165,6 +165,7 @@ const FakeMeebits = () => {
           borderRadius: "5px",
           border: "1px solid #ccc",
           width: "300px",
+          backgroundColor: "#f0f0f0",
         }}
         min="0"
         max="19999"

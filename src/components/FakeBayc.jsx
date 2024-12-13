@@ -76,7 +76,7 @@ const FakeBayc = () => {
 
   return (
     <div style={{ textAlign: 'center', marginTop: '50px', padding: '0 20px' }}>
-      <h1>Fake BAYC</h1>
+      <h1 style={{ marginBottom: '20px' }}>Fake BAYC</h1>
       {name && <p><strong>Collection Name:</strong> {name}</p>}
       {totalSupply !== null && <p><strong>Total Tokens:</strong> {totalSupply}</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}

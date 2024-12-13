@@ -86,7 +86,7 @@ const FakeBaycToken = () => {
 
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>Fake BAYC - Token #{tokenId}</h1>
+      <h1 style={{ marginBottom: '20px' }}>Fake BAYC - Token #{tokenId}</h1>
       {metadata && (
         <div>
           {metadata.image ? (

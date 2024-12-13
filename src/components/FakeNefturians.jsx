@@ -82,8 +82,8 @@ const FakeNefturians = () => {
   };
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>Fake Nefturians</h1>
+    <div style={{ textAlign: 'center' }}>
+      <h1 style={{ marginBottom: '20px' }}>Fake Nefturians</h1>
       {minPrice !== null && (
         <p><strong>Minimum Token Price:</strong> {minPrice} ETH</p>
       )}

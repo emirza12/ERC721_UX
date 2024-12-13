@@ -68,8 +68,8 @@ const ChainInfo = () => {
   }, []);
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '45px' }}>
-      <h1>Holesky Chain Info</h1>
+    <div style={{ textAlign: 'center', marginTop: '3px'}}>
+      <h1 style={{ marginBottom: '20px' }}>Holesky Chain Info</h1>
 
       {/* Display the button if not connected */}
       {!isConnected ? (

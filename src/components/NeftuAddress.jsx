@@ -61,12 +61,12 @@ const FakeNefturiansUser = () => {
 
   return (
     <div style={{ textAlign: 'center', marginTop: '20px' }}>
-      <h1>Fake Nefturians for {userAddress}</h1>
+      <h1 style={{ marginBottom: '20px' }}>Fake Nefturians for {userAddress}</h1>
       {tokens.length === 0 ? (
         <p>No tokens found for this address.</p>
       ) : (
         tokens.map((token, index) => (
-          <div key={index} style={{ margin: '10px', padding: '10px', border: '1px solid gray' }}>
+          <div key={index} style={{ margin: '10px', padding: '10px', border: '1px solid gray',borderRadius: '8px' }}>
             <h3>{token.name}</h3>
             <p>{token.description}</p>
             <img src={token.image} alt={token.name} style={{ maxWidth: '200px' }}

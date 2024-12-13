@@ -5,7 +5,7 @@ const ErrorPage = () => {
   
     return (
       <div>
-        <h1>Error</h1>
+        <h1 style={{ marginBottom: '20px' }}>Error</h1>
         <p>You are not connected to the Holesky network. Please switch networks in Metamask.</p>
         <button onClick={retry}>Retry</button>
       </div>
