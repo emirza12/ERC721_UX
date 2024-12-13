@@ -1,5 +1,7 @@
 # Ethereum DApp: Fake NFT Marketplace
 
+deployed on Vercel : https://erc-721-hgmdnot8e-emirza12s-projects.vercel.app/
+
 ## Overview
 
 This project is a TypeScript-based decentralized application (DApp) built using **React** and **Vite**. It connects to the **Holesky** network through **MetaMask** and allows users to interact with multiple smart contracts for NFT-related operations. The app supports multiple pages to manage, claim, and display NFTs, as well as minting and purchasing functionalities.
