@@ -72,4 +72,4 @@ VITE_PRIVATE_KEY=<your_holesky_private_key>
 Once you’ve installed the dependencies and set up the environment variables, you can run the development server:
 
 ```bash
-npm run dev
+npm start
